@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Form Validation | Creative - Bootstrap 3 Responsive Admin Template</title>
+  <title>Ceramicas Royal | Clientes</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,13 @@
   <!-- font icon -->
   <link href="css/elegant-icons-style.css" rel="stylesheet" />
   <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="css/daterangepicker.css" rel="stylesheet" />
+  <link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+  <link href="css/bootstrap-colorpicker.css" rel="stylesheet" />
+  <!-- date picker -->
+
+  <!-- color picker -->
+
   <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet" />
@@ -39,6 +46,7 @@
 </head>
 
 <body>
+
   <!-- container section start -->
   <section id="container" class="">
     <!--header start-->
@@ -62,10 +70,6 @@
         </ul>
         <!--  search form end -->
       </div>
-
-      <div class="top-nav notification-row">
-        <!-- notificatoin dropdown end-->
-      </div>
     </header>
     <!--header end-->
 
@@ -87,26 +91,17 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="form_component.html">Registro</a></li>
-              <li><a class="" href="form_validation.html">Contratos</a></li>
+              <li><a class="" href="registro_clientes.html">Registro</a></li>
+              <li><a class="" href="registro_contratos.html">Crear Contrato</a></li>
+              <li><a class="" href="consulta_clientes.html">Buscar cliente</a></li>
+              <li><a class="" href="consulta_contrato.html">Buscar contrato</a></li>
+              <li><a class="" href="pedido.html">Pedido</a></li>
+              <li><a class="" href="consulta_pedido.html">Buscar Pedido</a></li>
+              <li><a class="" href="factura.html">Factura</a></li>
+              <li><a class="" href="consulta_factura.html">Buscar Factura</a></li>
             </ul>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_piechart"></i>
-                          <span>Consultas</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Catalogo</a></li>
-              <li><a class="" href="buttons.html">Clientes</a></li>
-              <li><a class="" href="grids.html">Facturas</a></li>
-              <li><a class="" href="grids.html">Contratos</a></li>
-            </ul>
-          </li>
-          <li>
-
-          </li>
+          
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
@@ -115,8 +110,11 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="basic_table.html">Registro</a></li>
-              <li><a class="" href="basic_table.html">Consulta</a></li>
+              <li><a class="" href="basic_table.html">Registrar empleado</a></li>
+              <li><a class="" href="basic_table.html">Añadir a expediente</a></li>
+              <li><a class="" href="basic_table.html">Crear reuniones</a></li>
+              <li><a class="" href="basic_table.html">Turnos Horneros</a></li>
+              <li><a class="" href="basic_table.html">Asignacion de bonos</a></li>
             </ul>
           </li>
 
@@ -127,11 +125,23 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
+              <li><a class="" href="profile.html">Registro </a></li>
+              <li><a class="" href="login.html"><span>Creacion pieza </span></a></li>
+              <li><a class="" href="contact.html"><span></span></a></li>
               <li><a class="" href="blank.html">Blank Page</a></li>
               <li><a class="" href="404.html">404 Error</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Reportes</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="profile.html">de Empleados </a></li>
+              <li><a class="" href="login.html"><span>de Colecciones </span></a></li>
+              <li><a class="" href="blank.html">de Ventas</a></li>
             </ul>
           </li>
 
@@ -146,67 +156,122 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-files-o"></i> Contratos</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> Registro de clientes</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Menu</a></li>
               <li><i class="icon_document_alt"></i>Clientes</li>
-              <li><i class="fa fa-files-o"></i>Contratos</li>
+              <li><i class="fa fa-file-text-o"></i>Registro</li>
             </ol>
           </div>
         </div>
-        <!-- Form validations -->
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Informacion contrato
+                Informacion Clientes
               </header>
               <div class="panel-body">
-                <div class="form">
-                  <form class="form-horizontal " method="get">
+                <form class="form-horizontal " method="get">
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Numero de contrato</label>
+                    <label class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Rif Cliente</label>
+                    <label class="col-sm-2 control-label">Rif</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Fecha Inicio</label>
+                    <label class="col-sm-2 control-label">Telefono</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Descuento</label>
+                    <label class="col-sm-2 control-label">Direccion</label>
                     <div class="col-sm-10">
                       <input class="form-control" id="focusedInput" type="text">
                     </div>
                   </div>
                   <div class="form-group">
+                    <label class="col-sm-2 control-label">Correo</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pais</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
                         <button class="btn btn-primary" type="submit">Guardar</button>
-                        <button class="btn btn-secondary" type="submit">Consultar</button>
+                        
                         <button class="btn btn-default" type="button">Limpiar</button>
                       </div>
                     </div>
                 </form>
-                </div>
               </div>
             </section>
-          </div>
+            </div>
         </div>
-        <!-- page end-->
+        
       </section>
     </section>
     <!--main content end-->
+    <div class="text-right">
+      <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+          -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+    </div>
   </section>
   <!-- container section end -->
+  <!-- javascripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+
+  <!-- jquery ui -->
+  <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+  <!--custom checkbox & radio-->
+  <script type="text/javascript" src="js/ga.js"></script>
+  <!--custom switch-->
+  <script src="js/bootstrap-switch.js"></script>
+  <!--custom tagsinput-->
+  <script src="js/jquery.tagsinput.js"></script>
+
+  <!-- colorpicker -->
+
+  <!-- bootstrap-wysiwyg -->
+  <script src="js/jquery.hotkeys.js"></script>
+  <script src="js/bootstrap-wysiwyg.js"></script>
+  <script src="js/bootstrap-wysiwyg-custom.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/bootstrap-colorpicker.js"></script>
+  <script src="js/daterangepicker.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <!-- ck editor -->
+  <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+  <!-- custom form component script for this page-->
+  <script src="js/form-component.js"></script>
+  <!-- custome script for all page -->
+  <script src="js/scripts.js"></script>
+
+
 </body>
 
 </html>
