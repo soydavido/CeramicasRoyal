@@ -1,0 +1,62 @@
+
+<% include ../partials/cess %>
+<head>
+<title> Ceramicas Royal | Clientes </title>
+</head>
+
+<body>
+
+    <!--sidebar start-->
+    <% include ../partials/menu %>
+    <!--sidebar end-->
+
+    
+<section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> Consulta de clientes</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index">Menu</a></li>
+              <li><i class="icon_document_alt"></i>Clientes</li>
+              <li><i class="fa fa-file-text-o"></i>Buscar cliente</li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading">
+                Informacion Clientes
+              </header>
+              <div class="panel-body">
+                <form action="consultaClientes" method="post">
+                  
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Rif</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="rif">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                        
+                        
+                        <button class="btn btn-default" type="button">Limpiar</button>
+                      </div>
+                    </div>
+                </form>
+              </div>
+            </section>
+            </div>
+        </div>
+        
+      </section>
+    </section>
+
+    <!-- scripts -->
+
+    <% include ../partials/scripts %>
+</body>
